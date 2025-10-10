@@ -1,0 +1,131 @@
+/* --- ESTILOS MÓVIL (POR DEFECTO) --- */
+.footer {
+  background-color: #000000;
+  color: #fff;
+  font-size: 14px;
+  padding-top: 40px;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; /* Apila las columnas verticalmente en móvil */
+  text-align: center; /* Centra el texto en móvil */
+  gap: 30px;
+}
+
+.footerColumn {
+  width: 100%;
+}
+
+.footerColumn h4 {
+  font-family: 'Acumin Pro Wide', sans-serif;
+  font-style: italic;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.footerColumn ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerColumn li {
+  margin-bottom: 10px;
+}
+
+.footerColumn a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footerColumn a:hover {
+  color: #fff;
+}
+
+.logo {
+  max-width: 150px;
+  margin-bottom: 20px;
+}
+
+.paymentMethods {
+  max-width: 100px;
+  margin-bottom: 20px;
+}
+
+.socialsTitle {
+  margin-top: 20px;
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.socialLinks a {
+  color: #fff;
+  background-color: var(--accent-color);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.socialLinks a:hover {
+  transform: scale(1.1);
+}
+
+.copyrightBar {
+  background-color: var(--accent-color);
+  color: #fff;
+  text-align: center;
+  padding: 15px 10px;
+  margin-top: 40px;
+  font-size: 13px;
+}
+
+.copyrightBar p {
+  margin: 0;
+}
+
+
+/* --- ESTILOS DESKTOP (PANTALLAS GRANDES) --- */
+@media (min-width: 992px) {
+  .container {
+    flex-direction: row; /* Pone las columnas horizontalmente */
+    text-align: left; /* Alinea el texto a la izquierda */
+    justify-content: space-between;
+    align-items: flex-start; /* Alinea las columnas en la parte superior */
+    gap: 20px;
+  }
+
+  .footerColumn {
+    width: auto; /* El ancho se ajusta al contenido */
+  }
+
+  /* Ajustamos anchos específicos para un mejor control */
+  .footerColumn:nth-child(1) { flex-basis: 15%; } /* Logo */
+  .footerColumn:nth-child(2) { flex-basis: 20%; } /* Categorías */
+  .footerColumn:nth-child(3) { flex-basis: 20%; } /* Legales */
+  .footerColumn:nth-child(4) { flex-basis: 15%; } /* Contacto */
+  .footerColumn:nth-child(5) { flex-basis: 20%; text-align: center; } /* Pagos y Redes */
+
+  .logo {
+    margin-bottom: 0;
+  }
+
+  .socialLinks {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,96 @@
+import React, { useState, useEffect, useRef } from 'react';
+import styles from './HeroCarousel.module.css';
+
+const slidesData = [
+  {
+    desktopImage: '../../src/assets/banners/Desktop/banner1.png',
+    mobileImage: '../../src/assets/banners/Mobile/banner1mob.png',
+    alt: 'Banner de promoción de montacargas eléctricos con texto de reduce costos',
+  },
+  {
+    desktopImage: '../../src/assets/banners/Desktop/banner2.jpeg',
+    mobileImage: '../../src/assets/banners/Mobile/banner2mob.jpeg',
+    alt: 'Banner de promoción de equipos de almacén',
+  },
+  {
+    desktopImage: '../../src/assets/banners/Desktop/banner3.png',
+    mobileImage: '../../src/assets/banners/Mobile/banner3mob.png',
+    alt: 'Banner de promoción de equipos de almacén',
+  },
+  {
+    desktopImage: '../../src/assets/banners/Desktop/banner2.jpeg',
+    mobileImage: '../../src/assets/banners/Mobile/banner2mob.jpeg',
+    alt: 'Banner de promoción de equipos de almacén',
+  }
+];
+
+function HeroCarousel() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const timeoutRef = useRef(null);
+
+  const resetTimeout = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+  };
+
+  useEffect(() => {
+    resetTimeout();
+    timeoutRef.current = setTimeout(
+      () => setCurrentIndex((prev) => (prev === slidesData.length - 1 ? 0 : prev + 1)),
+      5000 // Cambia cada 5 segundos
+    );
+    return () => resetTimeout();
+  }, [currentIndex]);
+
+  const goToPrevious = () => {
+    const newIndex = currentIndex === 0 ? slidesData.length - 1 : currentIndex - 1;
+    setCurrentIndex(newIndex);
+  };
+
+  const goToNext = () => {
+    const newIndex = currentIndex === slidesData.length - 1 ? 0 : currentIndex + 1;
+    setCurrentIndex(newIndex);
+  };
+
+  const goToSlide = (slideIndex) => {
+    setCurrentIndex(slideIndex);
+  };
+
+  return (
+    <section 
+      className={styles.carouselContainer}
+      onMouseEnter={resetTimeout} // Pausa al pasar el mouse
+    >
+      <div className={styles.slider} style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+        {/* 2. El mapeo ahora es mucho más simple. Solo renderiza el slide con la imagen. */}
+        {slidesData.map((slide, index) => (
+          <div className={styles.slide} key={index}>
+            <picture>
+              <source media="(max-width: 768px)" srcSet={slide.mobileImage} />
+              <source media="(min-width: 769px)" srcSet={slide.desktopImage} />
+              <img src={slide.desktopImage} alt={slide.alt} className={styles.slideImage} />
+            </picture>
+          </div>
+        ))}
+      </div>
+      
+      <button aria-label="Diapositiva anterior" className={`${styles.arrow} ${styles.leftArrow}`} onClick={goToPrevious}>❮</button>
+      <button aria-label="Siguiente diapositiva" className={`${styles.arrow} ${styles.rightArrow}`} onClick={goToNext}>❯</button>
+
+      <div className={styles.dotsContainer}>
+        {slidesData.map((_, slideIndex) => (
+          <div 
+            key={slideIndex} 
+            className={`${styles.dot} ${currentIndex === slideIndex ? styles.activeDot : ''}`}
+            onClick={() => goToSlide(slideIndex)}
+            role="button"
+            aria-label={`Ir a la diapositiva ${slideIndex + 1}`}
+          ></div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+export default HeroCarousel;
