@@ -44,3 +44,25 @@ export const createSolicitud = async (solicitudData) => {
     throw error;
   }
 };
+
+export const getCategorias = async () => {
+  try {
+    const response = await fetch(`${API_BASE_URL}/categorias`);
+    if (!response.ok) throw new Error('Error al obtener las categorías');
+    return await response.json();
+  } catch (error) {
+    console.error(error);
+    return [];
+  }
+};
+
+export const getFeaturedProductos = async () => {
+  try {
+    const response = await fetch(`${API_BASE_URL}/productos/featured`);
+    if (!response.ok) throw new Error('Error al obtener los productos destacados');
+    return await response.json();
+  } catch (error) {
+    console.error(error);
+    return [];
+  }
+};

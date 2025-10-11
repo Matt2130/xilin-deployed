@@ -1,0 +1,122 @@
+.carouselSection {
+  padding: 60px 0;
+  overflow: hidden; /* Evita que el carrusel cause overflow horizontal */
+}
+.container {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.title {
+  font-family: 'Acumin Pro Wide', sans-serif;
+  font-weight: 900;
+  text-align: left; /* Alineado a la izquierda */
+  font-size: clamp(1.2rem, 4vw, 2rem);
+  color: #000;
+  margin: 0;
+}
+.viewAll {
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Contenedor para posicionar los botones */
+.swiperContainer {
+  position: relative;
+}
+
+.mySwiper {
+  padding: 10px 0 50px 0 !important; /* Añade padding vertical */
+}
+.slide {
+  text-align: center;
+  border: 1px solid #e0e0e0;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s ease;
+}
+
+.slide:hover {
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.productImage {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+.productName, .productModel {
+  font-size: 0.9rem;
+  color: #333;
+  margin: 5px 0;
+}
+.productName { font-weight: bold; text-transform: uppercase; }
+.specLink {
+  margin: 15px 0;
+  font-size: 0.9rem;
+  color: #555;
+  text-decoration: underline;
+}
+.buyButton {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: auto;
+}
+
+.swiperContainer :global(.swiper-button-next),
+.swiperContainer :global(.swiper-button-prev) {
+  background-color: white;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  color: var(--accent-color) !important;
+  
+  /* Posiciona los botones fuera del carrusel */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Ajustes finos de posición */
+.swiperContainer :global(.swiper-button-prev) {
+  left: -22px; /* La mitad del ancho del botón para que quede pegado al borde */
+}
+.swiperContainer :global(.swiper-button-next) {
+  right: -22px; /* La mitad del ancho del botón */
+}
+
+
+.swiperContainer :global(.swiper-button-next)::after,
+.swiperContainer :global(.swiper-button-prev)::after {
+  font-size: 16px !important;
+  font-weight: bold;
+}
+
+/* Oculta los botones en móvil, donde se usa el swipe */
+@media (max-width: 767px) {
+  .swiperContainer :global(.swiper-button-next),
+  .swiperContainer :global(.swiper-button-prev) {
+    display: none;
+  }
+}
+
+.mySwiper :global(.swiper-pagination-bullet-active) {
+  background-color: var(--accent-color) !important;
+}

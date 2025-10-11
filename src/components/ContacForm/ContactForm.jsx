@@ -4,7 +4,7 @@ import styles from './ContactForm.module.css';
 import { createSolicitud } from '../../services/api'; // Importamos la función de la API
 
 // Asumimos que la imagen del montacargas está en la carpeta public
-import formImageUrl from '../../assets/Form/FormApilador.webp'; 
+import formImageUrl from '/assets/Form/FormApilador.webp'; 
 
 function ContactForm() {
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
@@ -87,7 +87,7 @@ function ContactForm() {
             </div>
             
              <div className={styles.formGroup}>
-              <label htmlFor="nombre_empresa">Nombre de la empresa</label>
+              <label htmlFor="nombre_empresa">Nombre de la empresa*</label>
               <input 
                 id="nombre_empresa"
                 type="text"
@@ -96,7 +96,7 @@ function ContactForm() {
             </div>
 
             <div className={styles.formGroup}>
-              <label htmlFor="direccion_empresa">Dirección (Ciudad y Estado)</label>
+              <label htmlFor="direccion_empresa">Dirección (Ciudad y Estado)*</label>
               <input 
                 id="direccion_empresa"
                 type="text"

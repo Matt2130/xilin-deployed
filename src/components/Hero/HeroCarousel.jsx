@@ -3,23 +3,18 @@ import styles from './HeroCarousel.module.css';
 
 const slidesData = [
   {
-    desktopImage: '../../src/assets/banners/Desktop/banner1.png',
-    mobileImage: '../../src/assets/banners/Mobile/banner1mob.png',
+    desktopImage: '/assets/banners/Desktop/banner1.png',
+    mobileImage: '/assets/banners/Mobile/banner1mob.png',
     alt: 'Banner de promoción de montacargas eléctricos con texto de reduce costos',
   },
   {
-    desktopImage: '../../src/assets/banners/Desktop/banner2.jpeg',
-    mobileImage: '../../src/assets/banners/Mobile/banner2mob.jpeg',
+    desktopImage: '/assets/banners/Desktop/banner2.jpeg',
+    mobileImage: '/assets/banners/Mobile/banner2mob.jpeg',
     alt: 'Banner de promoción de equipos de almacén',
   },
   {
-    desktopImage: '../../src/assets/banners/Desktop/banner3.png',
-    mobileImage: '../../src/assets/banners/Mobile/banner3mob.png',
-    alt: 'Banner de promoción de equipos de almacén',
-  },
-  {
-    desktopImage: '../../src/assets/banners/Desktop/banner2.jpeg',
-    mobileImage: '../../src/assets/banners/Mobile/banner2mob.jpeg',
+    desktopImage: '/assets/banners/Desktop/banner3.png',
+    mobileImage: '/assets/banners/Mobile/banner3mob.png',
     alt: 'Banner de promoción de equipos de almacén',
   }
 ];

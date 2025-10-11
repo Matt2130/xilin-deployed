@@ -2,8 +2,8 @@ import React from 'react';
 import styles from './Footer.module.css';
 
 /* Imagenes */
-import logoBlancoUrl from '../../assets/logoxilinblanco.webp'; 
-import metodosPagoUrl from '../../assets/pagosVisa.png'; 
+import logoBlancoUrl from '/assets/logoxilinblanco.webp'; 
+import metodosPagoUrl from '/assets/pagosVisa.png'; 
 
 function Footer() {
   return (

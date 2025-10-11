@@ -1,0 +1,71 @@
+.showcaseSection {
+  padding: 60px 0;
+  background-color: #fff; /* Fondo blanco como en el diseño */
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  font-family: 'Acumin Pro Wide', sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  text-align: center;
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  margin-bottom: 50px;
+  color: #000;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cardImage {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.cardTitle {
+  font-family: 'Acumin Pro Wide', sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 1rem;
+  color: #000;
+  height: 40px;
+}
+
+.cardButton {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 10px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: auto;
+}
+
+.cardButton:hover {
+    color: #000;
+}
+
+/* Media query para escritorio */
+@media (min-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(5, 1fr); /* 5 columnas en desktop */
+  }
+}
