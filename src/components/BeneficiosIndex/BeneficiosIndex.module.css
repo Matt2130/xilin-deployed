@@ -1,0 +1,96 @@
+/* --- ESTILOS MÓVIL (POR DEFECTO) --- */
+.benefitsSection {
+  padding: 60px 0;
+  background-color: #ffffff;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  font-family: 'Acumin Pro Wide', sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  text-align: center;
+  font-size: clamp(1.25rem, 5vw, 2.25rem); /* Tamaño de fuente adaptable */
+  margin-bottom: 40px;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.benefitItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.benefitText h4 {
+  font-family: 'Acumin Pro Wide', sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 1.1rem;
+  margin: 0 0 5px 0;
+}
+
+.benefitText p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.ctaButton {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+  align-self: flex-start; /* Se alinea a la izquierda en móvil */
+}
+
+/* --- ESTILOS DESKTOP (PANTALLAS GRANDES) --- */
+@media (min-width: 768px) {
+  .contentWrapper {
+    flex-direction: row; /* Dos columnas en desktop */
+    align-items: center; /* Centra verticalmente el contenido */
+    gap: 50px;
+  }
+
+  .imageWrapper,
+  .textWrapper {
+    flex: 1; /* Ambas columnas ocupan el 50% del espacio */
+  }
+
+  .ctaButton {
+    align-self: flex-start; /* Se mantiene a la izquierda */
+  }
+}

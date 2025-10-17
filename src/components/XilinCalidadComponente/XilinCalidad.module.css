@@ -1,0 +1,198 @@
+.bannerMovimiento {
+  position: relative;
+  width: 100%;
+  height: 350px; /* Altura fija para móvil */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.bannerTitle {
+  font-family: 'Acumin Pro Wide', sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  font-size: clamp(1.2rem, 4vw, 2.5rem); /* Título adaptable */
+  margin-bottom: 25px;
+  line-height: 1.2;
+  color: #fff;
+}
+
+.ctaButton {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 12px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  font-family: 'Acumin Pro Wide', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.ctaButton:hover {
+  background-color: color-mix(in srgb, var(--accent-color), black 15%);
+}
+
+/* --- Bloque 2: Sección de Calidad --- */
+.calidadSection {
+  background-color: #000; /* Fondo negro */
+  padding: 60px 0;
+}
+
+.calidadContainer {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.calidadImageWrapper {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.calidadImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.calidadContent {
+  color: white;
+  text-align: center;
+}
+
+.calidadContent h2 {
+  color: #fcbf00;
+}
+
+.calidadContent h3 {
+  color: #fcbf00;
+}
+
+.calidadMainTitle {
+  font-family: 'Acumin Pro Wide', sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  color: var(--color-secundario);
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+.calidadSubtitle {
+  font-family: 'Acumin Pro Wide', sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--color-secundario);
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.calidadList {
+  list-style: none;
+  padding: 0;
+  margin: 20px;
+  text-align: left; 
+}
+
+.calidadListItem {
+  position: relative;
+  padding-left: 20px; /* Espacio para el ícono de viñeta */
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.calidadListItem::before {
+  content: '●'; /* Ícono de círculo o puedes usar '✓' */
+  color: var(--color-secundario); /* Amarillo */
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* --- Bloque 3: Banner de Video --- */
+.videoBanner {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Este contenedor mantiene la proporción del video */
+.videoWrapper {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  padding-top: 29.5%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.youtubeIframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+/* --- Media Queries para Desktop --- */
+@media (min-width: 992px) { /* Cambiamos a 992px para un mejor control en tablets grandes */
+  .bannerMovimiento {
+    height: 450px; 
+  }
+
+  .calidadContainer {
+    flex-direction: row; 
+    align-items: center; /* Centra verticalmente para mejor balance */
+    max-width: 1400px; /* Hacemos el contenedor más ancho */
+  }
+
+  .calidadImageWrapper {
+    flex: 1; /* Le damos una proporción de 1 */
+    max-width: 50%;
+  }
+
+  .calidadContent {
+    flex: 1.2; /* Le damos una proporción mayor (1.2) para que ocupe más espacio */
+    text-align: left; 
+    padding-left: 40px; /* Añadimos espacio entre la imagen y el texto */
+  }
+
+  .calidadMainTitle {
+    font-size: clamp(2rem, 3vw, 2.5rem);
+  }
+  
+  .calidadList {
+    padding-left: 0; /* Quitamos el padding extra ya que los items lo tienen */
+  }
+
+  .videoBanner {
+    height: 580px;
+  }
+}

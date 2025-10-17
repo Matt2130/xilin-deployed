@@ -20,6 +20,7 @@
   font-size: clamp(1.2rem, 4vw, 2rem);
   color: #000;
   margin: 0;
+  font-style: italic;
 }
 .viewAll {
     font-weight: bold;

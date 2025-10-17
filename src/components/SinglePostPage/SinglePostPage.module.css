@@ -1,0 +1,104 @@
+.articleContainer {
+  width: 90%;
+  max-width: 800px;
+  margin: 40px auto;
+  font-family: var(--default-font);
+}
+
+.title {
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 15px 0;
+}
+
+.authorPhoto {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.authorInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.authorInfo strong {
+  font-weight: bold;
+}
+
+.authorInfo span, .authorInfo time {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.banner {
+  width: 100%;
+  height: auto;
+  max-height: 450px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.content {
+  line-height: 1.7;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.content h2, .content h3 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.content p {
+  margin-bottom: 20px;
+}
+
+.content {
+  line-height: 1.7;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.content :global(h3) {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.content :global(ul) {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.content :global(li) {
+  margin-bottom: 10px;
+}
+
+.content :global(a) {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 12px 40px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  font-family: 'Acumin Pro Wide', sans-serif;
+}
+
+.content :global(a):hover {
+  color: #000;
+}

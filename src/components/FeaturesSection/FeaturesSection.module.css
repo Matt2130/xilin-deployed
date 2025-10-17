@@ -1,0 +1,84 @@
+/* --- MOBILE-FIRST STYLES (DEFAULT) --- */
+.featuresSection {
+  background-color: #000000;
+  padding: 60px 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.featureCard {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.iconWrapper {
+  background-color: var(--accent-color); /* Red circle */
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-shrink: 0;
+}
+
+.iconWrapper svg {
+    width: 50px;
+    height: 50px;
+}
+
+.title {
+  color: #fcbf00;
+  font-family: 'Acumin Pro Wide', sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.description {
+  color: #ffffff;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  max-width: 300px;
+}
+
+/* --- DESKTOP STYLES --- */
+@media (min-width: 992px) {
+  .container {
+    flex-direction: row; /* Arrange side-by-side on desktop */
+    justify-content: space-around; /* Distribute items evenly */
+    align-items: flex-start; /* Align to the top */
+  }
+
+  .featureCard {
+    flex: 1; /* Allow cards to grow and shrink */
+    max-width: 250px; /* Limit the max width of each card */
+  }
+}
+
+.containerDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.carateristicas {
+    font-family: 'Acumin Pro Wide', sans-serif;
+    font-style: italic;
+    font-weight: 900;
+    color: #000;
+    font-size: clamp(1rem, 3vw, 2.8rem);
+}

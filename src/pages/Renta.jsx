@@ -1,18 +1,18 @@
 import React from "react";
-import ProductsCarousel from "../components/ProductsCarousel/ProductsCarousel";
-import FeaturesSection from "../components/FeaturesSection/FeaturesSection";
 import BeneficiosIndex from "../components/BeneficiosIndex/BeneficiosIndex";
+import FeaturesSection from "../components/FeaturesSection/FeaturesSection";
+import ContactForm from "../components/ContacForm/ContactForm";
 
-function Products() {
+function RentaXilin() {
     return (
         <>
             <main>
-                <ProductsCarousel />
                 <FeaturesSection />
                 <BeneficiosIndex />
+                <ContactForm />
             </main>
         </>
     )
 }
 
-export default Products;
+export default RentaXilin;

@@ -53,9 +53,9 @@ function Footer() {
 
           <h4 className={styles.socialsTitle}>Síguenos</h4>
           <div className={styles.socialLinks}>
-            <a href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i className="bi bi-facebook"></i></a>
-            <a href="https://linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i className="bi bi-linkedin"></i></a>
-            <a href="https://instagram.com" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i className="bi bi-instagram"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61564573953947" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i className="bi bi-facebook"></i></a>
+            <a href="https://www.linkedin.com/company/xilinslp/posts/?feedView=all" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i className="bi bi-linkedin"></i></a>
+            <a href="https://www.instagram.com/xilinslp/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i className="bi bi-instagram"></i></a>
           </div>
         </div>
       </div>

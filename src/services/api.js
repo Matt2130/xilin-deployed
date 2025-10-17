@@ -2,25 +2,20 @@ const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 export const getProductos = async () => {
   try {
-    // 3. Hacemos la petición usando la URL base.
     const response = await fetch(`${API_BASE_URL}/productos`);
     
-    // 4. Manejamos errores en caso de que la API falle.
     if (!response.ok) {
       throw new Error('Error al obtener los productos');
     }
     
-    // 5. Devolvemos los datos en formato JSON.
     return await response.json();
   } catch (error) {
     console.error(error);
-    // Podríamos devolver un array vacío o lanzar el error para que el componente lo maneje.
     return []; 
   }
 };
 
 export const getProductoById = async (id) => {
-  // Lógica similar para obtener un producto por su ID...
 };
 
 export const createSolicitud = async (solicitudData) => {
@@ -64,5 +59,27 @@ export const getFeaturedProductos = async () => {
   } catch (error) {
     console.error(error);
     return [];
+  }
+};
+
+export const getBlogPosts = async (page = 1) => {
+  try {
+    const response = await fetch(`${API_BASE_URL}/blogs?page=${page}`);
+    if (!response.ok) throw new Error('Error al obtener los posts del blog');
+    return await response.json();
+  } catch (error) {
+    console.error(error);
+    return { posts: [], totalPages: 1, currentPage: 1 };
+  }
+};
+
+export const getBlogPostById = async (id) => {
+  try {
+    const response = await fetch(`${API_BASE_URL}/blogs/${id}`);
+    if (!response.ok) throw new Error('Post no encontrado');
+    return await response.json();
+  } catch (error) {
+    console.error(error);
+    return null; 
   }
 };
