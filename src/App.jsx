@@ -9,7 +9,11 @@ import ContactUS from './pages/Contacto';
 import VisitaTienda from './pages/VisitaTienda';
 import RentaXilin from './pages/Renta';
 import SinglePostPage from './components/SinglePostPage/SinglePostPage';
-import PageNotFound from './pages/PageNotFound';
+import PageNotFound from './components/Error404/PageNotFound';
+import Mantenimiento from './pages/ServicioMantenimiento';
+import Testimonios from './pages/Testimonios';
+import ProductDetailPage from './pages/ProductDetailPage/ProductDetailPage';
+import CategoryProductListPage from './pages/CategoryProductListPage/CategoryProductListPage';
 
 function App() {
 
@@ -24,12 +28,16 @@ function App() {
           <Route path='/' element={<Layout/>}>
 
             <Route index element={<IndexPage />}/>
-            <Route path="contacto" element={<ContactUS />}/>
             <Route path="productos" element={<Products />}/>
+            <Route path='/productos/:id' element={<ProductDetailPage />} />
+            <Route path='/productos/categoria/:categoryId' element={<CategoryProductListPage />} />
+            <Route path="renta" element={<RentaXilin />}/>
+            <Route path="servicio-mantenimiento" element={<Mantenimiento />}/>
+            <Route path="contacto" element={<ContactUS />}/>
+            <Route path="visita-nuestra-tienda" element={<VisitaTienda />}/>
             <Route path="blogs" element={<Blogs />}/>
             <Route path="blog/:id" element={<SinglePostPage />}/>
-            <Route path="visita-nuestra-tienda" element={<VisitaTienda />}/>
-            <Route path="renta" element={<RentaXilin />}/>
+            <Route path="testimonios" element={<Testimonios />}/>
 
             <Route path='*' element={<PageNotFound />}/>
           </Route>

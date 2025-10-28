@@ -1,6 +1,5 @@
 /* src/index.css */
 
-/* --- 1. DECLARACIÓN DE LA FUENTE PERSONALIZADA --- */
 @font-face {
   font-family: 'Acumin Pro Wide';
   /* La ruta ahora apunta a la carpeta de fuentes que creaste */
@@ -34,6 +33,11 @@ body {
   color: var(--default-color);
   background-color: var(--background-color);
   font-family: var(--default-font);
+}
+
+main {
+  min-height: calc(100vh - 150px);
+  padding-bottom: 60px; 
 }
 
 a {

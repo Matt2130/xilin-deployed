@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Footer.module.css';
+import { getCategorias } from '../../services/api';
 
 /* Imagenes */
 import logoBlancoUrl from '/assets/logoxilinblanco.webp'; 
 import metodosPagoUrl from '/assets/pagosVisa.png'; 
 
 function Footer() {
+  const [categorias, setCategorias] = useState([]);
+
+  useEffect(() => {
+    const fetchCategorias = async () => {
+      const data = await getCategorias();
+      setCategorias(data);
+    };
+    fetchCategorias();
+  }, []); 
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
@@ -17,14 +28,16 @@ function Footer() {
         </div>
 
         {/* Columna 2: Categorías */}
-        <div className={styles.footerColumn}>
+      <div className={styles.footerColumn}>
           <h4>Categorías</h4>
           <ul>
-            <li><a href="/productos?categoria=montacargas-electricos">Montacargas Eléctrico</a></li>
-            <li><a href="/productos?categoria=transpaleta-electrica">Transpaleta Eléctrica</a></li>
-            <li><a href="/productos?categoria=transpaleta-manual">Transpaleta Manual</a></li>
-            <li><a href="/productos?categoria=hombre-parado">Hombre Parado</a></li>
-            <li><a href="/productos?categoria=apilador-electrico">Apilador Eléctrico</a></li>
+            {categorias.map(cat => (
+              <li key={cat.id}>
+                <Link to={`/productos/categoria/${cat.id}`}>
+                  {cat.nombre}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -32,9 +45,9 @@ function Footer() {
         <div className={styles.footerColumn}>
           <h4>Legales</h4>
           <ul>
-            <li><a href="/assets/documentos/aviso-de-privacidad.pdf" target="_blank" rel="noopener noreferrer">Aviso de Privacidad</a></li>
-            <li><a href="/assets/documentos/T&C.pdf" target="_blank" rel="noopener noreferrer">Términos y Condiciones</a></li>
-            <li><a href="/assets/documentos/Poliza de Garantia Xilin.pdf" target="_blank" rel="noopener noreferrer">Política de Garantía</a></li>
+            <li><a href="/assets/Documentos/aviso-de-privacidad.pdf" target="_blank" rel="noopener noreferrer">Aviso de Privacidad</a></li>
+            <li><a href="/assets/Documentos/Terminos & Condiciones.pdf" target="_blank" rel="noopener noreferrer">Términos y Condiciones</a></li>
+            <li><a href="/assets/Documentos/Poliza de Garantia Xilin.pdf" target="_blank" rel="noopener noreferrer">Política de Garantía</a></li>
           </ul>
         </div>
 

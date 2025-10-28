@@ -1,24 +1,22 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import styles from './ContactForm.module.css';
-import { createSolicitud } from '../../services/api'; // Importamos la función de la API
+import { createSolicitud } from '../../services/api'; 
 
-// Asumimos que la imagen del montacargas está en la carpeta public
 import formImageUrl from '/assets/Form/FormApilador.webp'; 
 
 function ContactForm() {
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState(null); // 'success' o 'error'
+  const [submitStatus, setSubmitStatus] = useState(null);
 
   const onSubmit = async (data) => {
     setIsSubmitting(true);
     setSubmitStatus(null);
     try {
-      // Llamamos a la función de nuestro servicio API con los datos del formulario
       await createSolicitud(data);
       setSubmitStatus('success');
-      reset(); // Limpia el formulario después de un envío exitoso
+      reset();
     } catch (error) {
       setSubmitStatus('error');
     } finally {
@@ -113,8 +111,6 @@ function ContactForm() {
               ></textarea>
               {errors.mensaje && <p className={styles.errorMessage}>{errors.mensaje.message}</p>}
             </div>
-
-            {/* Aquí iría el reCAPTCHA si lo implementas */}
 
             <button type="submit" className={styles.submitButton} disabled={isSubmitting}>
               {isSubmitting ? 'Enviando...' : 'Enviar mensaje'}

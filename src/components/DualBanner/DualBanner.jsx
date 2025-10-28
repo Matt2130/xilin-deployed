@@ -5,12 +5,12 @@ const bannerData = [
   {
     imageUrl: '/assets/Index_imgs/banner2.svg',
     title: 'Maximiza la eficiencia en tu operación industrial con los montacargas eléctricos Xilin',
-    buttonLink: '/productos?categoria=montacargas-electricos',
+    buttonLink: '/productos',
   },
   {
     imageUrl: '/assets/Index_imgs/banner1.svg',
     title: 'Maximiza la eficiencia en tu operación industrial con los hombre parado de Xilin',
-    buttonLink: '/productos?categoria=hombre-parado',
+    buttonLink: '/productos',
   },
 ];
 

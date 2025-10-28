@@ -22,7 +22,7 @@ function CategoryShowcase() {
             <div key={categoria.id} className={styles.card}>
               <img src={categoria.imagen_url} alt={`Imagen de la categoría ${categoria.nombre}`} className={styles.cardImage} />
               <h3 className={styles.cardTitle}>{categoria.nombre}</h3>
-              <a href={`/productos?categoria=${categoria.nombre}`} className={styles.cardButton}>Ver Productos</a>
+              <a href={`/productos/categoria/${categoria.id}`} className={styles.cardButton}>Ver Productos</a>
             </div>
           ))}
         </div>

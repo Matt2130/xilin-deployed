@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { getFeaturedProductos } from '../../services/api';
 import styles from './ProductsCarousel.module.css';
 
-// 1. IMPORTANTE: Importa los estilos de los módulos que vas a usar.
-// Esta línea es la que hace que los botones y la paginación sean visibles.
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -31,22 +29,18 @@ function ProductsCarousel() {
             <a href="/productos" className={styles.viewAll}>Ver Todos</a>
         </div>
         
-        {/* Envolvemos Swiper en un contenedor para posicionar los botones fuera */}
         <div className={styles.swiperContainer}>
           <Swiper
             modules={[Navigation, Pagination]}
-            spaceBetween={20} // Un poco menos de espacio
-            slidesPerView={1.2} // En móvil, muestra una parte de la siguiente
+            spaceBetween={20} 
+            slidesPerView={1.2} 
             centeredSlides={true}
-            // 2. El modo loop se activa solo si hay suficientes productos
             loop={productos.length > 5} 
             
-            // 3. Habilitamos la navegación explícitamente
             navigation={true} 
             pagination={{ clickable: true }}
             
-            // 4. Breakpoints ajustados para ser más realistas
-              breakpoints={{
+            breakpoints={{
                     680: {
                     slidesPerView: 2,
                     spaceBetween: 20,
@@ -69,7 +63,7 @@ function ProductsCarousel() {
                 <p className={styles.productName}>{producto.nombre}</p>
                 <p className={styles.productModel}>MODELO: {producto.modelo}</p>
                 <a href={producto.ficha_tecnica_url} className={styles.specLink} target="_blank" rel="noopener noreferrer">Ver Ficha técnica</a>
-                <button className={styles.buyButton}>Comprar ahora</button>
+                <a href="/contacto"><button sr className={styles.buyButton}>Solicitar Cotización</button></a>
               </SwiperSlide>
             ))}
           </Swiper>

@@ -1,21 +1,31 @@
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
-export const getProductos = async () => {
+export const getProductos = async (params = {}) => {
   try {
-    const response = await fetch(`${API_BASE_URL}/productos`);
+    const queryString = new URLSearchParams(params).toString();
+    const url = `${API_BASE_URL}/productos${queryString ? `?${queryString}` : ''}`;
     
-    if (!response.ok) {
-      throw new Error('Error al obtener los productos');
-    }
-    
+    const response = await fetch(url);
+    if (!response.ok) throw new Error('Error al obtener los productos');
     return await response.json();
   } catch (error) {
-    console.error(error);
-    return []; 
+    console.error("Error fetching productos:", error);
+    return [];
   }
 };
 
 export const getProductoById = async (id) => {
+  try {
+    const response = await fetch(`${API_BASE_URL}/productos/${id}`);
+    if (!response.ok) {
+        if (response.status === 404) throw new Error('Producto no encontrado');
+        throw new Error('Error al obtener el producto');
+    }
+    return await response.json();
+  } catch (error) {
+    console.error("Error fetching product by ID:", error);
+    throw error; 
+  }
 };
 
 export const createSolicitud = async (solicitudData) => {

@@ -43,9 +43,11 @@ function XilinCalidad() {
       >
         <div className={styles.overlay}>
           <h2 className={styles.bannerTitle}>MOVIENDO TU CARGA, IMPULSANDO TU ÉXITO</h2>
-          <button className={styles.ctaButton} onClick={scrollToForm}>
-            Solicita una cotización
-          </button>
+          <a href="/contacto">
+            <button className={styles.ctaButton} onClick={scrollToForm}>
+              Solicita una cotización
+            </button>
+          </a>
         </div>
       </div>
 

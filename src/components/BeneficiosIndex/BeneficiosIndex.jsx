@@ -47,9 +47,11 @@ function BeneficiosIndex() {
                 </div>
               </div>
             ))}
-            <button className={styles.ctaButton} onClick={scrollToForm}>
-              Solicita una cotización
-            </button>
+            <a href="/contacto">
+              <button className={styles.ctaButton} onClick={scrollToForm}>
+                Solicita una cotización
+              </button>
+            </a>
           </div>
         </div>
       </div>

@@ -1,0 +1,187 @@
+/* --- Estilos Generales --- */
+.categoryBanner {
+  background-color: var(--accent-color);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-family: 'Acumin Pro Wide', sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  margin-bottom: 0;
+}
+.categoryBanner h1 {
+  margin: 0;
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  color: #fff;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 1400px;
+  margin: 40px auto;
+  gap: 40px;
+}
+
+/* --- Columnas --- */
+.infoColumn, .mediaColumn {
+  width: 100%;
+}
+
+.infoColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.infoColumn h2 {
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.model {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+.actionButtons {
+  display: grid;
+  grid-template-columns: 1fr; 
+  gap: 15px;
+  margin-bottom: 40px; 
+}
+.button {
+  padding: 12px 20px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+}
+.button:hover {
+    opacity: 0.85;
+    transform: translateY(-2px)
+}
+.buttonYellow { background-color: #FCBF00; color: #333; }
+.buttonRed { background-color: var(--accent-color); color: white; }
+.buttonGreen { background-color: #25D366; color: white; display: flex; align-items: center; justify-content: center; gap: 8px;}
+.buttonGreen i { font-size: 1.1em; }
+
+.mainImage {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  display: block;
+  margin: 0 auto; 
+  border: 1px solid #eee;
+  border-radius: 8px;
+}
+
+.mediaColumn {
+    width: 100%;
+}
+
+.videoWrapperVertical {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  aspect-ratio: 9 / 16; 
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+  background-color: #111;
+  position: relative;
+}
+
+.htmlVideo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.noVideoPlaceholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ccc;
+    background-color: #333;
+    font-size: 0.9rem;
+}
+
+.detailsSection {
+  background-color: #f9f9f9;
+  padding: 60px 0;
+  margin-top: 40px;
+}
+.detailsContainer {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.caracteristicasWrapper, .dimensionesWrapper {
+  width: 100%;
+}
+.caracteristicasWrapper h2, .dimensionesWrapper h2 {
+  font-family: 'Acumin Pro Wide', sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid var(--accent-color);
+  display: inline-block;
+}
+
+/* Estilos específicos para el contenido Markdown */
+.markdownContent { line-height: 1.7; font-size: 1rem; color: #333; }
+.markdownContent :global(h3) { font-size: 1.3rem; font-weight: bold; color: var(--accent-color); margin-top: 30px; margin-bottom: 15px; }
+.markdownContent :global(ul) { list-style: none; padding-left: 0; }
+.markdownContent :global(li) { position: relative; padding-left: 20px; margin-bottom: 10px; }
+.markdownContent :global(li::before) { content: '•'; color: var(--accent-color); position: absolute; left: 0; top: 0; font-size: 1.2em; }
+.markdownContent :global(strong) { font-weight: bold; }
+.markdownContent :global(a) { color: var(--accent-color); text-decoration: underline; font-weight: bold; }
+.markdownContent :global(blockquote) { border-left: 4px solid var(--accent-color); margin-left: 0; padding-left: 15px; font-style: italic; color: #555; }
+
+.dimensionesImage {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    display: block;
+    border: 1px solid #ddd;
+    margin-top: 15px;
+}
+
+@media (min-width: 992px) {
+  .mainContent {
+    flex-direction: row;
+    gap: 60px;
+    align-items: flex-start;
+  }
+  .infoColumn {
+    flex: 1.8;
+    order: 1;
+  }
+  .mediaColumn {
+    flex: 1; 
+    order: 2; 
+    position: sticky; 
+    top: 100px; 
+  }
+  .actionButtons {
+    grid-template-columns: 1fr 1fr; 
+  }
+  .detailsContainer {
+    flex-direction: row;
+    gap: 60px;
+  }
+  .caracteristicasWrapper { flex: 1.5; }
+  .dimensionesWrapper { flex: 1; }
+}

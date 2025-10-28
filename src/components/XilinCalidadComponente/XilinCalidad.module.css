@@ -1,7 +1,7 @@
 .bannerMovimiento {
   position: relative;
   width: 100%;
-  height: 350px; /* Altura fija para móvil */
+  height: 350px;
   background-size: cover;
   background-position: center;
   display: flex;
@@ -26,7 +26,7 @@
   font-family: 'Acumin Pro Wide', sans-serif;
   font-weight: 900;
   font-style: italic;
-  font-size: clamp(1.2rem, 4vw, 2.5rem); /* Título adaptable */
+  font-size: clamp(1.2rem, 4vw, 2.5rem);
   margin-bottom: 25px;
   line-height: 1.2;
   color: #fff;
@@ -49,7 +49,7 @@
 
 /* --- Bloque 2: Sección de Calidad --- */
 .calidadSection {
-  background-color: #000; /* Fondo negro */
+  background-color: #000; 
   padding: 60px 0;
 }
 
@@ -116,15 +116,15 @@
 
 .calidadListItem {
   position: relative;
-  padding-left: 20px; /* Espacio para el ícono de viñeta */
+  padding-left: 20px;
   margin-bottom: 8px;
   font-size: 0.95rem;
   line-height: 1.5;
 }
 
 .calidadListItem::before {
-  content: '●'; /* Ícono de círculo o puedes usar '✓' */
-  color: var(--color-secundario); /* Amarillo */
+  content: '●';
+  color: var(--color-secundario); 
   position: absolute;
   left: 0;
   top: 0;
@@ -134,21 +134,22 @@
 .videoBanner {
   position: relative;
   width: 100%;
-  height: 300px;
+  height: 550px;
   background-size: cover;
   background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
-/* Este contenedor mantiene la proporción del video */
 .videoWrapper {
   position: relative;
   width: 90%;
   max-width: 800px;
-  padding-top: 29.5%;
+  padding-top: 60%;
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
@@ -162,26 +163,26 @@
 }
 
 /* --- Media Queries para Desktop --- */
-@media (min-width: 992px) { /* Cambiamos a 992px para un mejor control en tablets grandes */
+@media (min-width: 992px) { 
   .bannerMovimiento {
     height: 450px; 
   }
 
   .calidadContainer {
     flex-direction: row; 
-    align-items: center; /* Centra verticalmente para mejor balance */
-    max-width: 1400px; /* Hacemos el contenedor más ancho */
+    align-items: center;
+    max-width: 1400px; 
   }
 
   .calidadImageWrapper {
-    flex: 1; /* Le damos una proporción de 1 */
+    flex: 1; 
     max-width: 50%;
   }
 
   .calidadContent {
-    flex: 1.2; /* Le damos una proporción mayor (1.2) para que ocupe más espacio */
+    flex: 1.2; 
     text-align: left; 
-    padding-left: 40px; /* Añadimos espacio entre la imagen y el texto */
+    padding-left: 40px;
   }
 
   .calidadMainTitle {
@@ -189,10 +190,14 @@
   }
   
   .calidadList {
-    padding-left: 0; /* Quitamos el padding extra ya que los items lo tienen */
+    padding-left: 0;
   }
 
   .videoBanner {
     height: 580px;
+  }
+
+  .videoWrapper {
+    padding-top: 29.5%;
   }
 }

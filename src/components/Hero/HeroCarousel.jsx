@@ -58,7 +58,6 @@ function HeroCarousel() {
       onMouseEnter={resetTimeout} // Pausa al pasar el mouse
     >
       <div className={styles.slider} style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
-        {/* 2. El mapeo ahora es mucho más simple. Solo renderiza el slide con la imagen. */}
         {slidesData.map((slide, index) => (
           <div className={styles.slide} key={index}>
             <picture>
