@@ -23,7 +23,7 @@ function Footer() {
         {/* Columna 1: Logo */}
         <div className={styles.footerColumn}>
           <a href="/" aria-label="Página de inicio">
-            <img src={logoBlancoUrl} alt="Logo Xilin en color blanco" className={styles.logo} />
+            <img src={logoBlancoUrl} alt="Logo Xilin en color blanco" className={styles.logo} loading='lazy' />
           </a>
         </div>
 
@@ -55,14 +55,14 @@ function Footer() {
         <div className={styles.footerColumn}>
           <h4>Contacto</h4>
           <ul>
-            <li><a href="https://wa.me/524444117481" target="_blank" rel="noopener noreferrer"><i className="bi bi-whatsapp"></i> +52 444 411 7481</a></li>
+            <li><a href="https://wa.me/524444117481?text=Hola%2C%20quiero%20más%20información" target="_blank" rel="noopener noreferrer"><i className="bi bi-whatsapp"></i> +52 444 411 7481</a></li>
           </ul>
         </div>
 
         {/* Columna 5: Pagos Seguros y Redes Sociales */}
         <div className={styles.footerColumn}>
           <h4>Pagos Seguros</h4>
-          <img src={metodosPagoUrl} alt="Métodos de pago: Visa y Mastercard" className={styles.paymentMethods} />
+          <img src={metodosPagoUrl} alt="Métodos de pago: Visa y Mastercard" className={styles.paymentMethods} loading='lazy' />
 
           <h4 className={styles.socialsTitle}>Síguenos</h4>
           <div className={styles.socialLinks}>

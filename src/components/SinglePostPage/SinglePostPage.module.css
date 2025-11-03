@@ -58,21 +58,11 @@
   color: #333;
 }
 
-.content h2, .content h3 {
-  margin-top: 40px;
+.content :global(p) {
   margin-bottom: 20px;
 }
 
-.content p {
-  margin-bottom: 20px;
-}
-
-.content {
-  line-height: 1.7;
-  font-size: 1.1rem;
-  color: #333;
-}
-
+.content :global(h2),
 .content :global(h3) {
   font-size: 1.5rem;
   font-weight: bold;
@@ -89,7 +79,42 @@
   margin-bottom: 10px;
 }
 
+.content :global(table) {
+  display: block; 
+  overflow-x: auto;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  white-space: nowrap;
+}
+.content :global(th),
+.content :global(td) {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+.content :global(th) {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+.content :global(tr:nth-child(even)) {
+  background-color: #f9f9f9;
+}
+
 .content :global(a) {
+  color: var(--accent-color);
+  text-decoration: underline;
+  font-weight: bold;
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+  font-family: inherit;
+  display: inline;
+}
+
+.content :global(a.cta-button) {
+  display: inline-block;
   background-color: var(--accent-color);
   color: white;
   padding: 12px 40px;
@@ -97,8 +122,44 @@
   font-weight: bold;
   border-radius: 5px;
   font-family: 'Acumin Pro Wide', sans-serif;
+  transition: background-color 0.3s ease;
 }
 
-.content :global(a):hover {
-  color: #000;
+.content :global(a.cta-button):hover {
+  background-color: color-mix(in srgb, var(--accent-color), black 15%);
+  color: white;
+}
+
+.content :global(.video-card) {
+  background: #f9f9f9;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  margin: 30px 0;
+  border-left: 5px solid var(--accent-color);
+}
+.content :global(.video-player) {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: #000;
+}
+.content :global(video),
+.content :global(iframe) {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: none;
+}
+.content :global(.video-caption) {
+  padding: 20px;
+}
+.content :global(.video-caption h4) {
+  margin: 0 0 5px 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.content :global(.video-caption p) {
+  margin: 0;
+  color: #555;
+  font-size: 0.95rem;
 }

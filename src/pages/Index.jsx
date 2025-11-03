@@ -13,6 +13,9 @@ function IndexPage() {
     return (
         <>
             <main>
+                <title>Xilin Montacargas | Venta y Renta de Montacargas Eléctricos</title>
+                <meta name="description" content="Descubre todo lo que Xilin Montacargas tiene para ti" />
+                <meta property="og:title" content="Xilin Montacargas | Venta y Renta" />
                 <HeroCarousel />
                 <CategoryShowcase />
                 <BeneficiosIndex />

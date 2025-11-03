@@ -8,6 +8,9 @@ function RentaXilin() {
     return (
         <>
             <main>
+                <title>Xilin Renta | Venta y Renta de Montacargas Eléctricos</title>
+                <meta name="description" content="Todos los productos que Xilin tiene para venta" />
+                <meta property="og:title" content="Xilin Montacargas | Venta y Renta" />
                 <RentaSeccion />
                 <FeaturesSection />
                 <BeneficiosIndex />

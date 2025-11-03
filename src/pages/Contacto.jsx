@@ -7,6 +7,9 @@ function ContactUS() {
     return (
         <>
         <main>
+            <title>Xilin Contacto | Venta y Renta de Montacargas Eléctricos</title>
+            <meta name="description" content="Aquí podras contactar nuestros servicios" />
+            <meta property="og:title" content="Xilin Montacargas | Venta y Renta" />
             <h1 className={styles.h1contacto}>CONTACTO</h1>
             <ContactoMapa />
             <ContactForm />

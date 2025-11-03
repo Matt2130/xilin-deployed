@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './MantenimientoSeccion.module.css';
 
-const bannerDesktop = '/assets/banners/Desktop/bannerservicio.png';
-const bannerMobile = '/assets/banners/Mobile/mantenimiento.png';
+const bannerDesktop = '/assets/banners/Desktop/bannerservicio.webp';
+const bannerMobile = '/assets/banners/Mobile/mantenimiento.webp';
 
 function MantenimientoSeccion() {
     return (
@@ -13,7 +13,7 @@ function MantenimientoSeccion() {
                 <picture className={styles.banner}>
                     <source media="(max-width: 767px)" srcSet={bannerMobile} />
                     <source media="(min-width: 768px)" srcSet={bannerDesktop} />
-                    <img src={bannerDesktop} alt="Servicios de Mantenimiento Xilin" />
+                    <img src={bannerDesktop} alt="Servicios de Mantenimiento Xilin" loading='lazy' />
                 </picture>
 
                 <div className={styles.contentWrapper}>

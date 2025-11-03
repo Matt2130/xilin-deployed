@@ -1,13 +1,11 @@
 import React from 'react';
 import styles from './XilinCalidad.module.css';
 
-import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
-const bannerCaracteristicas = '/assets/Index_imgs/banner-caract.webp'; // Banner inicial
-const calidadProductoImage = '/assets/Index_imgs/img1car2.png'; // Imagen del producto para la sección de calidad
-const fondoVideoBanner = '/assets/Index_imgs/bannerfondo.webp'; // Fondo para el banner del video
-const youtubeVideoId = 'vvpjgCGcOoU'; // ID del video de YouTube
+const bannerCaracteristicas = '/assets/Index_imgs/banner-caract.webp'; 
+const calidadProductoImage = '/assets/Index_imgs/img1car2.webp'; 
+const fondoVideoBanner = '/assets/Index_imgs/bannerfondo.webp';
 
 const seguridadEstabilidad = [
   "Eficiencia mejorada del eje motriz tipo H más popular, diseño de estructura optimizado y eficiencia mejorada.",

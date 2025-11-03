@@ -1,4 +1,8 @@
 /* --- Estilos Generales --- */
+.mainSectionProduct {
+  background-color: #2a2b2a;
+}
+
 .categoryBanner {
   background-color: var(--accent-color);
   color: white;
@@ -30,18 +34,19 @@
 }
 
 .infoColumn {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .infoColumn h2 {
   font-size: clamp(1.6rem, 4vw, 2.2rem);
   font-weight: bold;
   margin-bottom: 5px;
+  color: #fff;
 }
 .model {
   font-size: 1rem;
-  color: #555;
+  color: #bdbdbd;
   margin-bottom: 30px;
 }
 .actionButtons {
@@ -72,12 +77,10 @@
 
 .mainImage {
   width: 100%;
-  max-width: 500px;
+  max-width: 300px;
   height: auto;
   display: block;
-  margin: 0 auto; 
-  border: 1px solid #eee;
-  border-radius: 8px;
+  margin: 0 auto;
 }
 
 .mediaColumn {

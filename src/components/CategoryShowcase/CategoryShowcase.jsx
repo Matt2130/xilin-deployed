@@ -20,7 +20,7 @@ function CategoryShowcase() {
         <div className={styles.grid}>
           {categorias.map((categoria) => (
             <div key={categoria.id} className={styles.card}>
-              <img src={categoria.imagen_url} alt={`Imagen de la categoría ${categoria.nombre}`} className={styles.cardImage} />
+              <img src={categoria.imagen_url} alt={`Imagen de la categoría ${categoria.nombre}`} className={styles.cardImage} loading='lazy' />
               <h3 className={styles.cardTitle}>{categoria.nombre}</h3>
               <a href={`/productos/categoria/${categoria.id}`} className={styles.cardButton}>Ver Productos</a>
             </div>

@@ -59,7 +59,7 @@ function ProductsCarousel() {
           >
             {productos.map((producto) => (
               <SwiperSlide key={producto.id} className={styles.slide}>
-                <img src={producto.imagen_url} alt={producto.nombre} className={styles.productImage} />
+                <img src={producto.imagen_url} alt={producto.nombre} className={styles.productImage} loading='lazy' />
                 <p className={styles.productName}>{producto.nombre}</p>
                 <p className={styles.productModel}>MODELO: {producto.modelo}</p>
                 <a href={producto.ficha_tecnica_url} className={styles.specLink} target="_blank" rel="noopener noreferrer">Ver Ficha técnica</a>

@@ -30,7 +30,7 @@ function ContactForm() {
       <div className={styles.container}>
         {/* Columna de la Imagen */}
         <div className={styles.imageWrapper}>
-          <img src={formImageUrl} alt="Montacargas de la serie Reach CQDH18C" />
+          <img src={formImageUrl} alt="Montacargas de la serie Reach CQDH18C" loading='lazy'/>
         </div>
 
         {/* Columna del Formulario */}

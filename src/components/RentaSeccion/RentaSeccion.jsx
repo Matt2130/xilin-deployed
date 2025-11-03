@@ -16,9 +16,9 @@ const benefitsData = [
     { title: "Certificación DC-3", description: "Capacitación anual para tres operadores por equipo." }
 ];
 
-const topBannerDesktop = '/assets/banners/Desktop/bannerservicio.png';
-const topBannerMobile = '/assets/banners/Mobile/banner-mobile-renta.png';
-const middleImage = '/assets/banners/Desktop/montacargas-renta.jpg';
+const topBannerDesktop = '/assets/banners/Desktop/bannerservicio.webp';
+const topBannerMobile = '/assets/banners/Mobile/banner-mobile-renta.webp';
+const middleImage = '/assets/banners/Desktop/montacargas-renta.webp';
 
 function RentaSeccion() {
     const scrollToForm = () => {
@@ -31,7 +31,7 @@ function RentaSeccion() {
                 <picture>
                     <source media="(max-width: 767px)" srcSet={topBannerMobile} />
                     <source media="(min-width: 768px)" srcSet={topBannerDesktop} />
-                    <img src={topBannerDesktop} alt="Promoción de Montacargas Eléctricos Xilin" className={styles.topBannerImage} />
+                    <img src={topBannerDesktop} alt="Promoción de Montacargas Eléctricos Xilin" className={styles.topBannerImage} loading='lazy' />
                 </picture>
                 <div className={styles.overlay}>
                     <h1 className={styles.topBannerTitle}>
@@ -49,7 +49,7 @@ function RentaSeccion() {
             <section className={styles.efficiencySection}>
                 <div className={styles.efficiencyContainer}>
                     <div className={styles.efficiencyImageWrapper}>
-                        <img src={middleImage} alt="Montacargas eléctrico Xilin en almacén" />
+                        <img src={middleImage} alt="Montacargas eléctrico Xilin en almacén" loading='lazy' />
                     </div>
                     <div className={styles.efficiencyTextWrapper}>
                         <h2 className={styles.efficiencyTitle}>

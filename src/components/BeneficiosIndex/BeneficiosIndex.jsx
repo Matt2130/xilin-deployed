@@ -16,7 +16,7 @@ const benefitsData = [
   },
 ];
 
-const mainImageUrl = '/assets/Index_imgs/IMG_3383.svg';
+const mainImageUrl = '/assets/Index_imgs/IMG_3383.webp';
 const checkIconUrl = '/assets/icons/shield-check.svg';
 
 function BeneficiosIndex() {
@@ -33,14 +33,14 @@ function BeneficiosIndex() {
         <div className={styles.contentWrapper}>
           {/* Columna de la Imagen */}
           <div className={styles.imageWrapper}>
-            <img src={mainImageUrl} alt="Montacargas Xilin mostrando sus beneficios" />
+            <img src={mainImageUrl} alt="Montacargas Xilin mostrando sus beneficios" loading='lazy' />
           </div>
 
           {/* Columna de los Beneficios */}
           <div className={styles.textWrapper}>
             {benefitsData.map((benefit, index) => (
               <div key={index} className={styles.benefitItem}>
-                <img src={checkIconUrl} alt="Ícono de beneficio" className={styles.icon} />
+                <img src={checkIconUrl} alt="Ícono de beneficio" className={styles.icon} loading='lazy' />
                 <div className={styles.benefitText}>
                   <h4>{benefit.title}</h4>
                   <p>{benefit.description}</p>

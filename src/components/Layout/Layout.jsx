@@ -4,7 +4,7 @@ import Header from '../Header/Header'
 import Footer from '../Footer/Footer';
 import styles from './Layout.module.css';
 
-import logoDeLaEmpresa from '/assets/xilinlogo.svg';
+import logoDeLaEmpresa from '/assets/xilinlogo.webp';
 
 function Layout() {
   return (

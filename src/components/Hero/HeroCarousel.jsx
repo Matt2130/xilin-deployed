@@ -3,18 +3,18 @@ import styles from './HeroCarousel.module.css';
 
 const slidesData = [
   {
-    desktopImage: '/assets/banners/Desktop/banner1.png',
-    mobileImage: '/assets/banners/Mobile/banner1mob.png',
+    desktopImage: '/assets/banners/Desktop/banner1.webp',
+    mobileImage: '/assets/banners/Mobile/banner1mob.webp',
     alt: 'Banner de promoción de montacargas eléctricos con texto de reduce costos',
   },
   {
-    desktopImage: '/assets/banners/Desktop/banner2.jpeg',
-    mobileImage: '/assets/banners/Mobile/banner2mob.jpeg',
+    desktopImage: '/assets/banners/Desktop/banner2.webp',
+    mobileImage: '/assets/banners/Mobile/banner2mob.webp',
     alt: 'Banner de promoción de equipos de almacén',
   },
   {
-    desktopImage: '/assets/banners/Desktop/banner3.png',
-    mobileImage: '/assets/banners/Mobile/banner3mob.png',
+    desktopImage: '/assets/banners/Desktop/banner3.webp',
+    mobileImage: '/assets/banners/Mobile/banner3mob.webp',
     alt: 'Banner de promoción de equipos de almacén',
   }
 ];
@@ -63,7 +63,7 @@ function HeroCarousel() {
             <picture>
               <source media="(max-width: 768px)" srcSet={slide.mobileImage} />
               <source media="(min-width: 769px)" srcSet={slide.desktopImage} />
-              <img src={slide.desktopImage} alt={slide.alt} className={styles.slideImage} />
+              <img src={slide.desktopImage} alt={slide.alt} className={styles.slideImage} loading='lazy' />
             </picture>
           </div>
         ))}

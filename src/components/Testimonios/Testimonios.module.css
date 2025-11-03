@@ -1,0 +1,82 @@
+.h1testimonios {
+  font-family: 'Acumin Pro Wide', sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  text-align: center;
+  width: 100%;
+  height: 80px;
+  background-color: var(--accent-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  margin: 0;
+  font-size: clamp(1.2rem, 4vw, 1.8rem);
+}
+
+.pageContainer {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+.videoCard {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.videoCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.clientTag {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 12px 20px;
+  font-family: 'Acumin Pro Wide', sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+.videoWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9 / 16; 
+  background-color: #000;
+}
+
+.videoPlayer {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* --- ESTILOS DESKTOP --- */
+@media (min-width: 768px) {
+  .pageContainer {
+    margin: 60px auto;
+  }
+
+  .gridContainer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .gridContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

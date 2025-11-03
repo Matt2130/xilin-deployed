@@ -18,7 +18,7 @@ function Header({ logoUrl }) {
             <li><a href="/servicio-mantenimiento">Servicio de Mantenimiento</a></li>
             <li><a href="/contacto">Contacto</a></li>
             <li><a href="/visita-nuestra-tienda">Visita Nuestra Tienda</a></li>
-            <li><a target='_blank' href="https://wa.me/524444117481">Contáctanos al 444 411 7481 <i className="bi bi-whatsapp"></i></a></li>
+            <li><a target='_blank' href="https://wa.me/524444117481?text=Hola%2C%20quiero%20más%20información">Contáctanos al 444 411 7481 <i className="bi bi-whatsapp"></i></a></li>
             <li><a href="/blogs">Blog</a></li>
             <li><a href="/testimonios">Testimonios</a></li>
           </ul>

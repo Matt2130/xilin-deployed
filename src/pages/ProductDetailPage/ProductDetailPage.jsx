@@ -41,7 +41,7 @@ function ProductDetailPage() {
 
     return (
         <>
-            <main>
+            <main className={styles.mainSectionProduct}>
                 <div className={styles.categoryBanner}>
                     <h1>{product.categoria_nombre || 'Producto'}</h1>
                 </div>
@@ -54,7 +54,7 @@ function ProductDetailPage() {
                            <a href={product.ficha_tecnica_url} target="_blank" rel="noopener noreferrer" className={`${styles.button} ${styles.buttonYellow}`}>Ver ficha técnica</a>
                            <a href={product.manual_url} target="_blank" rel="noopener noreferrer" className={`${styles.button} ${styles.buttonYellow}`}>Ver Manual</a>
                            <button onClick={() => navigate('/contacto?producto=' + product.id)} className={`${styles.button} ${styles.buttonRed}`}>Solicitar cotización</button>
-                           <a href="https://wa.me/524444117481" target="_blank" rel="noopener noreferrer" className={`${styles.button} ${styles.buttonGreen}`}><i className="bi bi-whatsapp"></i> Contactar a un asesor</a>
+                           <a href="https://wa.me/524444117481?text=Hola%2C%20quiero%20más%20información" target="_blank" rel="noopener noreferrer" className={`${styles.button} ${styles.buttonGreen}`}><i className="bi bi-whatsapp"></i> Contactar a un asesor</a>
                         </div>
                         <img src={product.imagen_url} alt={`Imagen principal de ${product.nombre}`} className={styles.mainImage} />
                     </div>
