@@ -2,12 +2,11 @@
 
 @font-face {
   font-family: 'Acumin Pro Wide';
-  /* La ruta ahora apunta a la carpeta de fuentes que creaste */
   src: url('./assets/fonts/AcuminProWide-UltraBlack.woff2') format('woff2'),
        url('./assets/fonts/AcuminProWide-UltraBlack.woff') format('woff');
   font-weight: 900;
   font-style: normal;
-  font-display: swap; /* Mejora el rendimiento de carga */
+  font-display: swap;
 }
 
 * {

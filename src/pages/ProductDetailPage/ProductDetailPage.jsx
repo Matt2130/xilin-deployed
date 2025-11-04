@@ -69,8 +69,7 @@ function ProductDetailPage() {
                                      playsInline
                                      muted
                                      autoPlay 
-                                     loop 
-                                     poster={product.imagen_url}
+                                     loop
                                  >
                                      Tu navegador no soporta la etiqueta de video.
                                  </video>

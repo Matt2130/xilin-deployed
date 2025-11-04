@@ -42,7 +42,7 @@ function BeneficiosIndex() {
               <div key={index} className={styles.benefitItem}>
                 <img src={checkIconUrl} alt="Ícono de beneficio" className={styles.icon} loading='lazy' />
                 <div className={styles.benefitText}>
-                  <h4>{benefit.title}</h4>
+                  <h3>{benefit.title}</h3>
                   <p>{benefit.description}</p>
                 </div>
               </div>

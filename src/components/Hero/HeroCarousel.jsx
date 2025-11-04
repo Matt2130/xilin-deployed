@@ -3,11 +3,6 @@ import styles from './HeroCarousel.module.css';
 
 const slidesData = [
   {
-    desktopImage: '/assets/banners/Desktop/banner1.webp',
-    mobileImage: '/assets/banners/Mobile/banner1mob.webp',
-    alt: 'Banner de promoción de montacargas eléctricos con texto de reduce costos',
-  },
-  {
     desktopImage: '/assets/banners/Desktop/banner2.webp',
     mobileImage: '/assets/banners/Mobile/banner2mob.webp',
     alt: 'Banner de promoción de equipos de almacén',
